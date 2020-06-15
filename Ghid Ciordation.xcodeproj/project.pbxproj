@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		156EA4FC249576F700562F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156EA4FB249576F700562F93 /* Assets.xcassets */; };
 		156EA4FF249576F700562F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156EA4FE249576F700562F93 /* Preview Assets.xcassets */; };
 		156EA502249576F700562F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156EA500249576F700562F93 /* Main.storyboard */; };
+		156EA50B2495774D00562F93 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA50A2495774D00562F93 /* MainVM.swift */; };
+		156EA50E249577A600562F93 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 156EA50D249577A600562F93 /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		156EA501249576F700562F93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		156EA503249576F700562F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156EA504249576F700562F93 /* Ghid_Ciordation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ghid_Ciordation.entitlements; sourceTree = "<group>"; };
+		156EA50A2495774D00562F93 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156EA50E249577A600562F93 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 			children = (
 				156EA4F7249576F600562F93 /* AppDelegate.swift */,
 				156EA4F9249576F600562F93 /* ContentView.swift */,
+				156EA50A2495774D00562F93 /* MainVM.swift */,
 				156EA4FB249576F700562F93 /* Assets.xcassets */,
 				156EA500249576F700562F93 /* Main.storyboard */,
 				156EA503249576F700562F93 /* Info.plist */,
@@ -90,6 +95,9 @@
 			dependencies = (
 			);
 			name = "Ghid Ciordation";
+			packageProductDependencies = (
+				156EA50D249577A600562F93 /* SwiftSoup */,
+			);
 			productName = "Ghid Ciordation";
 			productReference = 156EA4F4249576F600562F93 /* Ghid Ciordation.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 156EA4EB249576F600562F93;
+			packageReferences = (
+				156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 156EA4F5249576F600562F93 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				156EA4FA249576F600562F93 /* ContentView.swift in Sources */,
+				156EA50B2495774D00562F93 /* MainVM.swift in Sources */,
 				156EA4F8249576F600562F93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		156EA50D249577A600562F93 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 156EA4EC249576F600562F93 /* Project object */;
 }

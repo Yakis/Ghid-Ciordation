@@ -7,11 +7,38 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel = MainVM()
+    @State private var text: String = ""
+    
+    
+    @State private var cancellable: AnyCancellable?
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Spacer().frame(height: 50)
+            Button(action: {
+                    self.viewModel.getAll()
+                
+            }) {
+                Text("Apasa")
+            }
+        Text(text)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .font(.custom("HelveticaNeue-Light", size: 10))
+            .padding(.all, 50)
+            Spacer()
+        }
+        .onAppear {
+            self.cancellable = self.viewModel.contentIsReady
+                .sink { text in
+                    self.text = text
+            }
+        }
     }
 }
 
