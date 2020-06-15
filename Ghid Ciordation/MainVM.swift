@@ -12,33 +12,95 @@ import SwiftSoup
 
 
 
+struct Day: Codable {
+    
+    var name: String
+    var channels: [Channel]
+    
+}
+
+struct Channel: Codable {
+    var name: String
+    var content: Content
+    var day: String
+}
+
+struct Content: Codable {
+    var day: String
+    var channel: String
+    var body: String
+}
+
+
+
 class MainVM: ObservableObject {
     
     
-    var contentIsReady = CurrentValueSubject<String, Never>("")
+    var contentIsReady = PassthroughSubject<Void, Never>()
     
     var cancellables = Set<AnyCancellable>()
     
     var hours = [String]()
     var contentList = [String]()
     var combined = [String]()
-    var days = ["luni", "marti", "miercuri", "joi", "vineri"]
-    var programe = ["antena-1-hd", "pro-tv-hd", "hbo-hd"]
+    var days = ["marti", "miercuri", "joi", "vineri", "sambata", "duminica", "luni"]
+    var programe = ["tvr-1", "pro-tv-hd", "antena-1-hd", "pro-2", "b1-tv", "tvr-2", "prima-tv", "hbo", "happy-channel", "pro-cinema", "axn", "diva", "kanal-d", "digi-sport-1", "national-tv"]
     
+    var ghidTv = [Day]() {
+        didSet {
+            if ghidTv.count == 7 {
+                contentIsReady.send()
+            }
+        }
+    }
     
-    func getAll() {
-        for day in days {
-            for program in programe {
-                getTv(day: day, program: program)
+    var channels = [Channel]() {
+        didSet {
+            if channels.count == 15 {
+                createDays(channels: channels)
+            }
+        }
+    }
+    
+    var rawContent = [Content]() {
+        didSet {
+            if rawContent.count == 105 {
+                for day in days {
+                    for program in programe {
+                        createChannels(day: day, channel: program)
+                    }
+                }
             }
         }
     }
     
     
-    func getTv(day: String, program: String) {
-        print("Se descarca \(day)...")
+    func createDays(channels: [Channel]) {
+        self.channels.removeAll()
+        let day = Day(name: channels.first!.day, channels: channels)
+            self.ghidTv.append(day)
+    }
+    
+    
+    func createChannels(day: String, channel: String) {
+        let firstSorted = rawContent.filter { $0.day == day }
+        let secondSorted = firstSorted.filter { $0.channel == channel }
+        let channel = Channel(name: channel, content: secondSorted.first!, day: day)
+        self.channels.append(channel)
+    }
+    
+    
+    func getAll(day: String) {
+        for program in programe {
+            getChannel(day: day, program: program)
+        }
+    }
+    
+    
+    func getChannel(day: String, program: String) {
+        //print("Se descarca \(day)...")
         combined.removeAll()
-        contentIsReady.send("")
+        //contentIsReady.send("")
         guard let url = URL(string: "https://m.cinemagia.ro/program-tv/\(program)/" + day) else { return }
         URLSession.shared.dataTaskPublisher(for: url)
             .eraseToAnyPublisher()
@@ -65,21 +127,14 @@ class MainVM: ObservableObject {
                         let content = try content.text()
                         self.contentList.append(content)
                     }
+                    self.combined.removeAll()
                     let zipped = zip(self.hours, self.contentList)
-                    self.combined.append("_____\(program)_____")
-                    self.combined.append("_____\(day)_____")
                     for (hour, content) in zipped {
                         let line = hour + " " + content
                         self.combined.append(line)
                     }
-                    self.contentIsReady.send(self.combined.joined(separator: "\n"))
-                    do {
-                        let filename = self.getDocumentsDirectory().appendingPathComponent("\(day).txt")
-                        try self.combined.joined(separator: "\n").write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-                        print("\(day) done!")
-                    } catch {
-                        print("File write error: \(error)")
-                    }
+                    let content = Content(day: day, channel: program, body: self.combined.joined(separator: "\n"))
+                    self.rawContent.append(content)
                 } catch {
                     print("Decoding error: \(error)")
                 }

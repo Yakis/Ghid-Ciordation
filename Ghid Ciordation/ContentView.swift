@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import xml_encoder
 
 struct ContentView: View {
     
@@ -22,24 +23,48 @@ struct ContentView: View {
         VStack {
             Spacer().frame(height: 50)
             Button(action: {
-                    self.viewModel.getAll()
-                
+                self.getTVProgram()
             }) {
                 Text("Apasa")
             }
-        Text(text)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .font(.custom("HelveticaNeue-Light", size: 10))
-            .padding(.all, 50)
+            Text(text)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .font(.custom("HelveticaNeue-Light", size: 10))
+                .padding(.all, 50)
             Spacer()
         }
         .onAppear {
             self.cancellable = self.viewModel.contentIsReady
-                .sink { text in
-                    self.text = text
+                .sink {
+                    self.text = "\(self.viewModel.ghidTv.count)"
+                    self.encode()
             }
         }
     }
+    
+    
+    func encode() {
+        let encoder = JSONEncoder()
+        do {
+            let xmlFilename = self.viewModel.getDocumentsDirectory().appendingPathComponent("GhidTV.json")
+            let xml = try encoder.encode(self.viewModel.ghidTv)
+            print(xml)
+            try xml.write(to: xmlFilename)
+            //try xml.write(to: xmlFilename, atomically: true, encoding: String.Encoding.utf16)
+        } catch {
+            print("File write error: \(error)")
+        }
+    }
+    
+    
+    
+    func getTVProgram() {
+        for day in self.viewModel.days {
+            self.viewModel.getAll(day: day)
+        }
+    }
+    
+    
 }
 
 

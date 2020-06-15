@@ -14,6 +14,7 @@
 		156EA502249576F700562F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156EA500249576F700562F93 /* Main.storyboard */; };
 		156EA50B2495774D00562F93 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA50A2495774D00562F93 /* MainVM.swift */; };
 		156EA50E249577A600562F93 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 156EA50D249577A600562F93 /* SwiftSoup */; };
+		15BA7A752497FD300000C83C /* XMLEncoder in Frameworks */ = {isa = PBXBuildFile; productRef = 15BA7A742497FD300000C83C /* XMLEncoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				156EA50E249577A600562F93 /* SwiftSoup in Frameworks */,
+				15BA7A752497FD300000C83C /* XMLEncoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +99,7 @@
 			name = "Ghid Ciordation";
 			packageProductDependencies = (
 				156EA50D249577A600562F93 /* SwiftSoup */,
+				15BA7A742497FD300000C83C /* XMLEncoder */,
 			);
 			productName = "Ghid Ciordation";
 			productReference = 156EA4F4249576F600562F93 /* Ghid Ciordation.app */;
@@ -128,6 +131,7 @@
 			mainGroup = 156EA4EB249576F600562F93;
 			packageReferences = (
 				156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				15BA7A732497FD300000C83C /* XCRemoteSwiftPackageReference "xml-encoder" */,
 			);
 			productRefGroup = 156EA4F5249576F600562F93 /* Products */;
 			projectDirPath = "";
@@ -367,6 +371,14 @@
 				minimumVersion = 2.3.2;
 			};
 		};
+		15BA7A732497FD300000C83C /* XCRemoteSwiftPackageReference "xml-encoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adam-fowler/xml-encoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -374,6 +386,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		15BA7A742497FD300000C83C /* XMLEncoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15BA7A732497FD300000C83C /* XCRemoteSwiftPackageReference "xml-encoder" */;
+			productName = XMLEncoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

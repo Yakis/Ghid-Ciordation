@@ -9,6 +9,15 @@
           "revision": "774dc9c7213085db8aa59595e27c1cd22e428904",
           "version": "2.3.2"
         }
+      },
+      {
+        "package": "XMLEncoder",
+        "repositoryURL": "https://github.com/adam-fowler/xml-encoder.git",
+        "state": {
+          "branch": null,
+          "revision": "61ca1f64c72c64ed74daf7579d456e092033e0fe",
+          "version": "0.3.0"
+        }
       }
     ]
   },
