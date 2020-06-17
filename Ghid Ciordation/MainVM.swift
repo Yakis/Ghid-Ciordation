@@ -9,11 +9,11 @@
 import SwiftUI
 import Combine
 import SwiftSoup
+import XMLCoder
 
 
 
 struct Day: Codable {
-    
     var name: String
     var channels: [Channel]
     
@@ -37,19 +37,21 @@ class MainVM: ObservableObject {
     
     
     var contentIsReady = PassthroughSubject<Void, Never>()
+    var status = CurrentValueSubject<String, Never>("")
     
     var cancellables = Set<AnyCancellable>()
     
     var hours = [String]()
     var contentList = [String]()
     var combined = [String]()
-    var days = ["marti", "miercuri", "joi", "vineri", "sambata", "duminica", "luni"]
+    var days = ["vineri", "sambata", "duminica", "luni", "marti", "miercuri", "joi"]
     var programe = ["tvr-1", "pro-tv-hd", "antena-1-hd", "pro-2", "b1-tv", "tvr-2", "prima-tv", "hbo", "happy-channel", "pro-cinema", "axn", "diva", "kanal-d", "digi-sport-1", "national-tv"]
     
     var ghidTv = [Day]() {
         didSet {
             if ghidTv.count == 7 {
                 contentIsReady.send()
+                status.send("Done! 😜")
             }
         }
     }
@@ -135,6 +137,7 @@ class MainVM: ObservableObject {
                     }
                     let content = Content(day: day, channel: program, body: self.combined.joined(separator: "\n"))
                     self.rawContent.append(content)
+                    self.status.send(content.day + " - " + content.channel)
                 } catch {
                     print("Decoding error: \(error)")
                 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Ghid Ciordation</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>x86_64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>0127C83EF7EA090092260EF00C60774EC3F63968</string>
+				<key>dateExpires</key>
+				<string>17/04/2021</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>com.apple.security.app-sandbox</key>
+				<true/>
+				<key>com.apple.security.files.user-selected.read-only</key>
+				<true/>
+				<key>com.apple.security.network.client</key>
+				<true/>
+				<key>com.apple.security.network.server</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Ghid Ciordation.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>4WPNK427TB</string>
+				<key>name</key>
+				<string>Mugurel Moscaliuc</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

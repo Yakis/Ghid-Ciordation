@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151AE1E52498412C00858B6F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151AE1E42498412C00858B6F /* ActivityIndicator.swift */; };
 		156EA4F8249576F600562F93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA4F7249576F600562F93 /* AppDelegate.swift */; };
 		156EA4FA249576F600562F93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA4F9249576F600562F93 /* ContentView.swift */; };
 		156EA4FC249576F700562F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156EA4FB249576F700562F93 /* Assets.xcassets */; };
@@ -14,10 +15,11 @@
 		156EA502249576F700562F93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156EA500249576F700562F93 /* Main.storyboard */; };
 		156EA50B2495774D00562F93 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EA50A2495774D00562F93 /* MainVM.swift */; };
 		156EA50E249577A600562F93 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 156EA50D249577A600562F93 /* SwiftSoup */; };
-		15BA7A752497FD300000C83C /* XMLEncoder in Frameworks */ = {isa = PBXBuildFile; productRef = 15BA7A742497FD300000C83C /* XMLEncoder */; };
+		15F54E0F2498B1A800C8A491 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 15F54E0E2498B1A800C8A491 /* XMLCoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151AE1E42498412C00858B6F /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		156EA4F4249576F600562F93 /* Ghid Ciordation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghid Ciordation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		156EA4F7249576F600562F93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		156EA4F9249576F600562F93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,8 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F54E0F2498B1A800C8A491 /* XMLCoder in Frameworks */,
 				156EA50E249577A600562F93 /* SwiftSoup in Frameworks */,
-				15BA7A752497FD300000C83C /* XMLEncoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +71,7 @@
 				156EA503249576F700562F93 /* Info.plist */,
 				156EA504249576F700562F93 /* Ghid_Ciordation.entitlements */,
 				156EA4FD249576F700562F93 /* Preview Content */,
+				151AE1E42498412C00858B6F /* ActivityIndicator.swift */,
 			);
 			path = "Ghid Ciordation";
 			sourceTree = "<group>";
@@ -99,7 +102,7 @@
 			name = "Ghid Ciordation";
 			packageProductDependencies = (
 				156EA50D249577A600562F93 /* SwiftSoup */,
-				15BA7A742497FD300000C83C /* XMLEncoder */,
+				15F54E0E2498B1A800C8A491 /* XMLCoder */,
 			);
 			productName = "Ghid Ciordation";
 			productReference = 156EA4F4249576F600562F93 /* Ghid Ciordation.app */;
@@ -131,7 +134,7 @@
 			mainGroup = 156EA4EB249576F600562F93;
 			packageReferences = (
 				156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
-				15BA7A732497FD300000C83C /* XCRemoteSwiftPackageReference "xml-encoder" */,
+				15F54E0D2498B1A800C8A491 /* XCRemoteSwiftPackageReference "XMLCoder" */,
 			);
 			productRefGroup = 156EA4F5249576F600562F93 /* Products */;
 			projectDirPath = "";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151AE1E52498412C00858B6F /* ActivityIndicator.swift in Sources */,
 				156EA4FA249576F600562F93 /* ContentView.swift in Sources */,
 				156EA50B2495774D00562F93 /* MainVM.swift in Sources */,
 				156EA4F8249576F600562F93 /* AppDelegate.swift in Sources */,
@@ -371,12 +375,12 @@
 				minimumVersion = 2.3.2;
 			};
 		};
-		15BA7A732497FD300000C83C /* XCRemoteSwiftPackageReference "xml-encoder" */ = {
+		15F54E0D2498B1A800C8A491 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adam-fowler/xml-encoder.git";
+			repositoryURL = "https://github.com/MaxDesiatov/XMLCoder.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				minimumVersion = 0.11.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -387,10 +391,10 @@
 			package = 156EA50C249577A600562F93 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
 		};
-		15BA7A742497FD300000C83C /* XMLEncoder */ = {
+		15F54E0E2498B1A800C8A491 /* XMLCoder */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 15BA7A732497FD300000C83C /* XCRemoteSwiftPackageReference "xml-encoder" */;
-			productName = XMLEncoder;
+			package = 15F54E0D2498B1A800C8A491 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

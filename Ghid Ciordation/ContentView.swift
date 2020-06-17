@@ -8,7 +8,7 @@
 
 import SwiftUI
 import Combine
-import xml_encoder
+import XMLCoder
 
 struct ContentView: View {
     
@@ -17,7 +17,7 @@ struct ContentView: View {
     
     
     @State private var cancellable: AnyCancellable?
-    
+    @State private var statusCancellable: AnyCancellable?
     
     var body: some View {
         VStack {
@@ -27,32 +27,52 @@ struct ContentView: View {
             }) {
                 Text("Apasa")
             }
+            
             Text(text)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .font(.custom("HelveticaNeue-Light", size: 10))
+                .font(.custom("HelveticaNeue-Light", size: 20))
                 .padding(.all, 50)
             Spacer()
         }
         .onAppear {
+            self.statusCancellable = self.viewModel.status
+                .sink { status in
+                    self.text = status
+            }
             self.cancellable = self.viewModel.contentIsReady
                 .sink {
-                    self.text = "\(self.viewModel.ghidTv.count)"
-                    self.encode()
+                    self.encodeToJSON()
             }
         }
     }
     
     
-    func encode() {
+    func encodeToJSON() {
         let encoder = JSONEncoder()
         do {
-            let xmlFilename = self.viewModel.getDocumentsDirectory().appendingPathComponent("GhidTV.json")
-            let xml = try encoder.encode(self.viewModel.ghidTv)
-            print(xml)
-            try xml.write(to: xmlFilename)
-            //try xml.write(to: xmlFilename, atomically: true, encoding: String.Encoding.utf16)
+            let jsonFilename = self.viewModel.getDocumentsDirectory().appendingPathComponent("GhidTV.json")
+            let json = try encoder.encode(self.viewModel.ghidTv)
+            try json.write(to: jsonFilename)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+               self.$text.wrappedValue = "Done! 😜"
+            }
         } catch {
             print("File write error: \(error)")
+        }
+    }
+    
+    
+    func encodeToXML() {
+        let encoder = XMLEncoder()
+        do {
+            let xmlFilename = self.viewModel.getDocumentsDirectory().appendingPathComponent("GhidTV.xml")
+            let xml = try encoder.encode(self.viewModel.ghidTv)
+            try xml.write(to: xmlFilename)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+               self.$text.wrappedValue = "Done! 😜"
+            }
+        } catch {
+            print("Error encoding XML: \(error)")
         }
     }
     

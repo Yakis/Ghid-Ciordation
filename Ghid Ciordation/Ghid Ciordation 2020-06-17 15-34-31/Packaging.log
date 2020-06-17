@@ -1,0 +1,97 @@
+2020-06-17 14:34:23 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f8d46fe61c0; archive(resolved)='<IDEArchive: 0x7f8d5f9874b0>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f8d46fe61c0; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7f8d46cb8c80; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d4793b1e0; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d45f9bd90; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d47937a00; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d46df5dd0; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d55fa7fc0; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d46647580; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8d46269c20; teamID='4WPNK427TB', teamName='Mugurel Moscaliuc', teamType='Individual', username='yakis.monk@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8d45e3a2b0; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='(null)'>
+	<IDEDistributionContext: 0x7f8d47f7c760; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7f8d46ef12c0>', team='(null)'>
+	<IDEDistributionContext: 0x7f8d47f74540; archive = '<IDEArchive: 0x7f8d5f9874b0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7f8d46fe61c0>
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionCreateDestRootStep
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionCopyItemStep
+2020-06-17 14:34:23 +0000  Running /usr/bin/ditto '-V' '/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app' '/var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/Root/Applications/Ghid Ciordation.app'
+2020-06-17 14:34:23 +0000  >>> Copying /Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app 
+2020-06-17 14:34:23 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2020-06-17 14:34:23 +0000  2784 bytes for ./Contents/_CodeSignature/CodeResources
+2020-06-17 14:34:23 +0000  copying file ./Contents/MacOS/Ghid Ciordation ... 
+2020-06-17 14:34:23 +0000  1490048 bytes for ./Contents/MacOS/Ghid Ciordation
+2020-06-17 14:34:23 +0000  copying file ./Contents/Resources/Base.lproj/Main.storyboardc/MainMenu.nib ... 
+2020-06-17 14:34:23 +0000  36340 bytes for ./Contents/Resources/Base.lproj/Main.storyboardc/MainMenu.nib
+copying file ./Contents/Resources/Base.lproj/Main.storyboardc/Info.plist ... 
+2020-06-17 14:34:23 +0000  163 bytes for ./Contents/Resources/Base.lproj/Main.storyboardc/Info.plist
+2020-06-17 14:34:23 +0000  copying file ./Contents/Info.plist ... 
+2020-06-17 14:34:23 +0000  1580 bytes for ./Contents/Info.plist
+copying file ./Contents/PkgInfo ... 
+2020-06-17 14:34:23 +0000  8 bytes for ./Contents/PkgInfo
+2020-06-17 14:34:23 +0000  /usr/bin/ditto exited with 0
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionEmbedProfileStep
+2020-06-17 14:34:23 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8d478b80b0; bundleID='com.yakis.Ghid-Ciordation', path='<DVTFilePath:0x7f8d46c113b0:'/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8d462b6660; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8d47bd4300; name='Apple Development: Mugurel Moscaliuc (AE2VJ53MB6)', hash='0127C83EF7EA090092260EF00C60774EC3F63968', serialNumber='1B627FB808531F27', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-17 17:17:16 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.network.client" = 1;
+    "com.apple.security.network.server" = 1;
+}', teamID='4WPNK427TB', identifier='com.yakis.Ghid-Ciordation', executablePath='<DVTFilePath:0x7f8d46e06310:'/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app/Contents/MacOS/Ghid Ciordation'>', hardenedRuntime='1'>'>
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionInfoPlistStep
+2020-06-17 14:34:23 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2020-06-17 14:34:23 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2020-06-17 14:34:23 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionSymbolsStep
+2020-06-17 14:34:23 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionAppThinningStep
+2020-06-17 14:34:23 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionArchThinningStep
+2020-06-17 14:34:23 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/Root/Applications/Ghid Ciordation.app/Contents/MacOS/Ghid Ciordation' '-verify_arch' 'arm64e'
+2020-06-17 14:34:23 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2020-06-17 14:34:23 +0000  Skipping architecture thinning for item "Ghid Ciordation" because arch "arm64e" wasn't found
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionODRStep
+2020-06-17 14:34:23 +0000  Processing step: IDEDistributionStripXattrsStep
+2020-06-17 14:34:23 +0000  Running /usr/bin/xattr '-crs' '/var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/Root/Applications/Ghid Ciordation.app'
+2020-06-17 14:34:24 +0000  /usr/bin/xattr exited with 0
+2020-06-17 14:34:24 +0000  Processing step: IDEDistributionCodesignStep
+2020-06-17 14:34:24 +0000  Entitlements for <IDEDistributionItem: 0x7f8d478b80b0; bundleID='com.yakis.Ghid-Ciordation', path='<DVTFilePath:0x7f8d46c113b0:'/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8d462b6660; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8d595c9ad0; name='Apple Development: Mugurel Moscaliuc (AE2VJ53MB6)', hash='0127C83EF7EA090092260EF00C60774EC3F63968', serialNumber='1B627FB808531F27', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-17 17:17:16 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.network.client" = 1;
+    "com.apple.security.network.server" = 1;
+}', teamID='4WPNK427TB', identifier='com.yakis.Ghid-Ciordation', executablePath='<DVTFilePath:0x7f8d46e06310:'/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app/Contents/MacOS/Ghid Ciordation'>', hardenedRuntime='1'>'>: {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.network.client" = 1;
+    "com.apple.security.network.server" = 1;
+}
+2020-06-17 14:34:24 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8d478b80b0; bundleID='com.yakis.Ghid-Ciordation', path='<DVTFilePath:0x7f8d46c113b0:'/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8d462b6660; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8d47996cc0; name='Apple Development: Mugurel Moscaliuc (AE2VJ53MB6)', hash='0127C83EF7EA090092260EF00C60774EC3F63968', serialNumber='1B627FB808531F27', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-04-17 17:17:16 +0000''>', entitlements='{
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.network.client" = 1;
+    "com.apple.security.network.server" = 1;
+}', teamID='4WPNK427TB', identifier='com.yakis.Ghid-Ciordation', executablePath='<DVTFilePath:0x7f8d46e06310:'/Users/yakis/Library/Developer/Xcode/Archives/2020-06-17/Ghid Ciordation 17-06-2020, 15.33.xcarchive/Products/Applications/Ghid Ciordation.app/Contents/MacOS/Ghid Ciordation'>', hardenedRuntime='1'>'> to: /var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/entitlements~~~c8KFMw
+2020-06-17 14:34:24 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '0127C83EF7EA090092260EF00C60774EC3F63968' '--entitlements' '/var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/entitlements~~~c8KFMw' '--preserve-metadata=identifier,flags,runtime' '/var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/Root/Applications/Ghid Ciordation.app'
+2020-06-17 14:34:24 +0000  /var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/Root/Applications/Ghid Ciordation.app: replacing existing signature
+2020-06-17 14:34:24 +0000  /var/folders/28/pln2scw529q263cvp82_7pkr0000gn/T/XcodeDistPipeline.~~~qsSPzC/Root/Applications/Ghid Ciordation.app: signed app bundle with Mach-O thin (x86_64) [com.yakis.Ghid-Ciordation]
+2020-06-17 14:34:24 +0000  /usr/bin/codesign exited with 0
+2020-06-17 14:34:24 +0000  Processing step: IDEDistributionZipODRItemStep
+2020-06-17 14:34:24 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2020-06-17 14:34:24 +0000  Processing step: IDEDistributionSkipPackagingStep
+2020-06-17 14:34:24 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2020-06-17 14:34:24 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2020-06-17 14:34:24 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2020-06-17 14:34:24 +0000  Processing step: IDEDistributionCreateManifestStep
+2020-06-17 14:34:24 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

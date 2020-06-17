@@ -11,12 +11,12 @@
         }
       },
       {
-        "package": "XMLEncoder",
-        "repositoryURL": "https://github.com/adam-fowler/xml-encoder.git",
+        "package": "XMLCoder",
+        "repositoryURL": "https://github.com/MaxDesiatov/XMLCoder.git",
         "state": {
           "branch": null,
-          "revision": "61ca1f64c72c64ed74daf7579d456e092033e0fe",
-          "version": "0.3.0"
+          "revision": "ac411bd6ab342780be0dfe6f679410f791d751d9",
+          "version": "0.11.1"
         }
       }
     ]
