@@ -49,7 +49,7 @@ class MainVM: ObservableObject {
     
     var ghidTv = [Day]() {
         didSet {
-            if ghidTv.count == 7 {
+            if ghidTv.count == days.count {
                 contentIsReady.send()
                 status.send("Done! 😜")
             }
@@ -58,7 +58,7 @@ class MainVM: ObservableObject {
     
     var channels = [Channel]() {
         didSet {
-            if channels.count == 15 {
+            if channels.count == programe.count {
                 createDays(channels: channels)
             }
         }
@@ -66,7 +66,7 @@ class MainVM: ObservableObject {
     
     var rawContent = [Content]() {
         didSet {
-            if rawContent.count == 105 {
+            if rawContent.count == days.count * programe.count {
                 for day in days {
                     for program in programe {
                         createChannels(day: day, channel: program)
@@ -100,9 +100,7 @@ class MainVM: ObservableObject {
     
     
     func getChannel(day: String, program: String) {
-        //print("Se descarca \(day)...")
         combined.removeAll()
-        //contentIsReady.send("")
         guard let url = URL(string: "https://m.cinemagia.ro/program-tv/\(program)/" + day) else { return }
         URLSession.shared.dataTaskPublisher(for: url)
             .eraseToAnyPublisher()
@@ -155,6 +153,10 @@ class MainVM: ObservableObject {
     }
     
     
+    func getAltDirectory() {
+        let paths = FileManager.default.urls(for: .desktopDirectory, in: .localDomainMask)
+        print(paths)
+    }
     
     
 }
